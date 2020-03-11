@@ -28,9 +28,8 @@ public class RaceResults {
         });
 
         StringBuilder oResult = new StringBuilder("Results :\n");
-        for (Arrival lItem : mArrivals) {
+        for (Arrival lItem : mArrivals)
             oResult.append("#").append(lItem.mRFID).append(" (").append(lItem.mTimeDuration.toString()).append(")\n");
-        }
         System.out.print(oResult.toString());
     }
 
