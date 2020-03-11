@@ -10,6 +10,10 @@ public class TimeDuration {
         mTime = iTime;
     }
 
+    public int getTime() {
+        return mTime;
+    }
+
     @Override
     public String toString() {
         String oOutput;
