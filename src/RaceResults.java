@@ -19,9 +19,8 @@ public class RaceResults {
         mArrivals.sort(new Comparator<Arrival>() {
             @Override
             public int compare(Arrival o1, Arrival o2) {
-
                 if (o1.mTimeDuration.getTime() < o2.mTimeDuration.getTime())
-                    return 0;
+                    return -1;
                 else if (o1.mTimeDuration.getTime() > o2.mTimeDuration.getTime())
                     return 1;
                 return 0;
@@ -29,9 +28,8 @@ public class RaceResults {
         });
 
         StringBuilder oResult = new StringBuilder("Results :\n");
-        int lPlace = 0;
         for (Arrival lItem : mArrivals) {
-            oResult.append("#").append(lPlace).append(lItem.mRFID).append("(").append(lItem.mTimeDuration.toString()).append(")\n");
+            oResult.append("#").append(lItem.mRFID).append(" (").append(lItem.mTimeDuration.toString()).append(")\n");
         }
         System.out.print(oResult.toString());
     }
